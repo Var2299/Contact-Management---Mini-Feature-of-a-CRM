@@ -72,7 +72,9 @@ Frontend Setup
 The frontend server will run at http://localhost:3000.
 ## Database Schema
 
-The backend uses **MongoDB** with a `Contact` model that consists of the following fields:
+The backend uses MongoDB due to its flexibility and scalability, which allows easy handling of semi-structured data like contacts. Unlike traditional SQL databases, MongoDB's document-based structure provides faster querying and better performance for large datasets, making it ideal for dynamic and rapidly evolving applications.
+
+The **Contact** model consists of the following fields:
 
 - **firstName** (String): The first name of the contact (required).
 - **lastName** (String): The last name of the contact (required).
