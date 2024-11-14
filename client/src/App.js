@@ -21,7 +21,7 @@ const App = () => {
   const [formError, setFormError] = useState('');
 
   useEffect(() => {
-    axios.get('http://localhost:5000/contacts')
+    axios.get('${https://contact-management-mini-feature-of-a-crm-mfte.onrender.com}/contacts')
       .then(response => setContacts(response.data))
       .catch(error => console.error('Error fetching contacts:', error));
   }, []);
