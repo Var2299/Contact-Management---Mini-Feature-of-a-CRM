@@ -2,15 +2,18 @@
 const mongoose = require('mongoose');
 
 const connect = () => {
-  mongoose.connect('mongodb://localhost:27017/pp', { 
+  const mongoUri = process.env.MONGO_URI;  
+  if (!mongoUri) {
+    console.error("Mongo URI is not defined in environment variables.");
+    process.exit(1); 
+  }
+
+  mongoose.connect(mongoUri, { 
     useNewUrlParser: true, 
     useUnifiedTopology: true 
   })
-  .then(() => console.log("MongoDB connected"))
-  .catch(err => {
-    console.error("MongoDB connection error:", err);
-    process.exit(1);
-  });
+    .then(() => console.log('MongoDB connected'))
+    .catch((error) => console.error('Error connecting to MongoDB:', error));
 };
 
 module.exports = { connect };
