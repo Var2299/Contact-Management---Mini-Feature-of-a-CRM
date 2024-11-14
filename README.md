@@ -11,8 +11,7 @@ This is a **Contact Management App** that allows users to perform CRUD operation
 
 ---
 
-![image](https://github.com/user-attachments/assets/cdcc82d3-ff7c-4b8f-9729-4f118bb9bf25)
-![image](https://github.com/user-attachments/assets/4f8f7064-6a13-48ee-b833-59553b44223b)
+![image](https://github.com/user-attachments/assets/df8a25dc-1c1f-42be-a157-c6dbc6880271)
 
 
 ## Features
