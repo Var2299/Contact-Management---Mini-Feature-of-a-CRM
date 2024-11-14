@@ -64,16 +64,28 @@ Frontend Setup
      ```bash
      npm start
 The frontend server will run at http://localhost:3000.
-
 ## Database Schema
 
 The backend uses **MongoDB** with a `Contact` model that consists of the following fields:
 
 - **firstName** (String): The first name of the contact (required).
 - **lastName** (String): The last name of the contact (required).
-- **email** (String): The email address of the contact (required and validated).
-- **phone** (String): The phone number of the contact (required and validated).
+- **email** (String): The email address of the contact (required). Validated to ensure the email format is correct.
+- **phone** (String): The phone number of the contact (required). Validated to ensure the phone number format is correct.
 - **company** (String): The company associated with the contact (required).
 - **jobTitle** (String): The job title of the contact (required).
 
-Validation is applied to the **email** and **phone** fields to ensure they follow proper formats. If invalid data is provided, the system returns an error message to inform the user.
+### Validation
+
+1. **Email Validation**: 
+   - The email must follow the standard email format (e.g., `example@domain.com`).
+   - Both the frontend (React) and backend (MongoDB) enforce this validation to ensure data integrity.
+
+2. **Phone Validation**:
+   - The phone number must follow the standard phone number format, allowing for various international formats (e.g., `+1 (123) 456-7890`).
+   - This validation is implemented both on the frontend (React) and the backend (MongoDB) to prevent invalid phone numbers from being submitted.
+
+3. **Other Fields**:
+   - The `firstName`, `lastName`, `company`, and `jobTitle` fields are required but do not have additional specific formatting rules beyond being non-empty.
+
+This ensures that all contacts are stored with proper data formats and prevents invalid data from entering the system.
