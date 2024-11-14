@@ -32,26 +32,37 @@ Make sure you have the following installed:
    ```bash
    git clone https://github.com/your-username/contact-management-app.git
    cd contact-management-app
+   
 2. Navigate to the backend folder:
+   ```bash
+   cd backend
 
-```bash
-Copy code
-cd backend
 3. Install the dependencies:
+   ```bash
+   npm install
 
-```bash
-Copy code
-npm install
 4. Start MongoDB locally if you're using a local database:
+   ```bash
+   mongod
 
-```bash
-Copy code
-mongod
 5. Run the backend server:
-
-```bash
-Copy code
-npm start
+   ```bash
+   npm start
 The backend server will run at http://localhost:5000.
+
+Frontend Setup
+
+  1. Navigate to the frontend folder:
+     ```bash
+     cd ../frontend
+
+  2. Install the dependencies:
+     ```bash
+     npm install
+
+  3. Start the frontend server:
+     ```bash
+     npm start
+The frontend server will run at http://localhost:3000.
 
 
