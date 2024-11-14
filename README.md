@@ -67,37 +67,13 @@ The frontend server will run at http://localhost:3000.
 
 ## Database Schema
 
-The backend uses **MongoDB**, and the `Contact` model is defined as follows:
+The backend uses **MongoDB** with a `Contact` model that consists of the following fields:
 
-```js
-const contactSchema = new mongoose.Schema({
-  firstName: { type: String, required: true },
-  lastName: { type: String, required: true },
-  email: { 
-    type: String, 
-    required: true,
-    validate: {
-      validator: function(v) {
-        const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-        return emailPattern.test(v);
-      },
-      message: props => `${props.value} is not a valid email address!`
-    }
-  },
-  phone: {
-    type: String,
-    required: true,
-    validate: {
-      validator: function(v) {
-        const phonePattern = /^[+]?[\d\s\-()]{7,15}$/;
-        return phonePattern.test(v);
-      },
-      message: props => `${props.value} is not a valid phone number!`
-    }
-  },
-  company: { type: String, required: true },
-  jobTitle: { type: String, required: true }
-});
+- **firstName** (String): The first name of the contact (required).
+- **lastName** (String): The last name of the contact (required).
+- **email** (String): The email address of the contact (required and validated).
+- **phone** (String): The phone number of the contact (required and validated).
+- **company** (String): The company associated with the contact (required).
+- **jobTitle** (String): The job title of the contact (required).
 
-
-
+Validation is applied to the **email** and **phone** fields to ensure they follow proper formats. If invalid data is provided, the system returns an error message to inform the user.
