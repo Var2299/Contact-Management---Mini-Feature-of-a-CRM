@@ -70,6 +70,19 @@ Frontend Setup
      ```bash
      npm start
 The frontend server will run at http://localhost:3000.
+
+### Use MongoDB Atlas for Cloud Database
+
+If you prefer using a cloud database, you can set up **MongoDB Atlas**:
+
+1. Create a [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) account and set up a new cluster.
+2. Once your cluster is created, navigate to the **Cluster** dashboard and click on the **Connect** button.
+3. Select **Connect your application** and copy the **Connection URI**.
+4. In the backend directory, create or update the `.env` file and add the following line:
+
+   ```bash
+   MONGO_URI=your-mongodb-atlas-uri
+
 ## Database Schema
 
 The backend uses MongoDB due to its flexibility and scalability, which allows easy handling of semi-structured data like contacts. Unlike traditional SQL databases, MongoDB's document-based structure provides faster querying and better performance for large datasets, making it ideal for dynamic and rapidly evolving applications.
