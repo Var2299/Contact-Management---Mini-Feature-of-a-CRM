@@ -64,7 +64,7 @@ const App = () => {
   };
 
   const addNewContact = () => {
-    axios.post('http://localhost:5000/contacts', formData)
+    axios.post('${https://contact-management-mini-feature-of-a-crm-mfte.onrender.com}/contacts', formData)
       .then(response => {
         setContacts(prevContacts => [...prevContacts, response.data]);
         clearForm();
@@ -73,7 +73,7 @@ const App = () => {
   };
 
   const updateContact = () => {
-    axios.put(`http://localhost:5000/contacts/${currentContactId}`, formData)
+    axios.put(`${https://contact-management-mini-feature-of-a-crm-mfte.onrender.com}/contacts/${currentContactId}`, formData)
       .then(response => {
         setContacts(contacts.map(contact =>
           contact._id === currentContactId ? response.data : contact
@@ -96,7 +96,7 @@ const App = () => {
   };
 
   const handleDelete = (id) => {
-    axios.delete(`http://localhost:5000/contacts/${id}`)
+    axios.delete(`${https://contact-management-mini-feature-of-a-crm-mfte.onrender.com}/contacts/${id}`)
       .then(() => setContacts(contacts.filter(contact => contact._id !== id)))
       .catch(error => console.error('Error deleting contact:', error));
   };
