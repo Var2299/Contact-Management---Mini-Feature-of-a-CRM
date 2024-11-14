@@ -20,8 +20,11 @@ const App = () => {
   const [sortBy, setSortBy] = useState('firstName');
   const [formError, setFormError] = useState('');
 
+  // Update the URL template literals correctly
+  const API_URL = 'https://contact-management-mini-feature-of-a-crm-mfte.onrender.com';
+
   useEffect(() => {
-    axios.get('${https://contact-management-mini-feature-of-a-crm-mfte.onrender.com}/contacts')
+    axios.get(`${API_URL}/contacts`)
       .then(response => setContacts(response.data))
       .catch(error => console.error('Error fetching contacts:', error));
   }, []);
@@ -64,7 +67,7 @@ const App = () => {
   };
 
   const addNewContact = () => {
-    axios.post('${https://contact-management-mini-feature-of-a-crm-mfte.onrender.com}/contacts', formData)
+    axios.post(`${API_URL}/contacts`, formData)
       .then(response => {
         setContacts(prevContacts => [...prevContacts, response.data]);
         clearForm();
@@ -73,7 +76,7 @@ const App = () => {
   };
 
   const updateContact = () => {
-    axios.put(`${https://contact-management-mini-feature-of-a-crm-mfte.onrender.com}/contacts/${currentContactId}`, formData)
+    axios.put(`${API_URL}/contacts/${currentContactId}`, formData)
       .then(response => {
         setContacts(contacts.map(contact =>
           contact._id === currentContactId ? response.data : contact
@@ -96,7 +99,7 @@ const App = () => {
   };
 
   const handleDelete = (id) => {
-    axios.delete(`${https://contact-management-mini-feature-of-a-crm-mfte.onrender.com}/contacts/${id}`)
+    axios.delete(`${API_URL}/contacts/${id}`)
       .then(() => setContacts(contacts.filter(contact => contact._id !== id)))
       .catch(error => console.error('Error deleting contact:', error));
   };
