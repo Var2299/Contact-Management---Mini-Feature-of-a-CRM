@@ -34,22 +34,22 @@ Make sure you have the following installed:
    cd contact-management-app
 2. Navigate to the backend folder:
 
-bash
+```bash
 Copy code
 cd backend
 3. Install the dependencies:
 
-bash
+```bash
 Copy code
 npm install
 4. Start MongoDB locally if you're using a local database:
 
-bash
+```bash
 Copy code
 mongod
 5. Run the backend server:
 
-bash
+```bash
 Copy code
 npm start
 The backend server will run at http://localhost:5000.
