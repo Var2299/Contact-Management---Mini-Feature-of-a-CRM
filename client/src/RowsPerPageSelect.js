@@ -1,4 +1,3 @@
-// src/components/RowsPerPageSelect.js
 import React from 'react';
 import { FormControl, InputLabel, Select, MenuItem } from '@mui/material';
 
