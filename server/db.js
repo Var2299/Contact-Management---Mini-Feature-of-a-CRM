@@ -1,10 +1,10 @@
 const mongoose = require('mongoose');
 
 const connect = () => {
-  const mongoUri = process.env.MONGO_URI;  // Load Mongo URI from environment variable
+  const mongoUri = process.env.MONGO_URI; 
   if (!mongoUri) {
     console.error("Mongo URI is not defined in environment variables.");
-    process.exit(1);  // Exit the app if the URI is not provided
+    process.exit(1);  
   }
 
   mongoose.connect(mongoUri, { 
