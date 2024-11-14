@@ -1,0 +1,153 @@
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background-color: #f0f4f8;
+  color: #333;
+}
+
+h1 {
+  text-align: center;
+  color: #005f73;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  padding-top: 50px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: #ffffff;
+  padding: 2.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+form .MuiTextField-root {
+  margin-bottom: 1.5rem;
+  width: 100%;
+}
+
+form .MuiButton-root {
+  width: 100%;
+  background-color: #005f73;
+  color: white;
+  font-weight: 600;
+  padding: 14px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+form .MuiButton-root:hover {
+  background-color: #004e59;
+}
+
+.MuiTableContainer-root {
+  margin-top: 2rem;
+  width: 100%;
+  max-width: 1200px;
+  margin-bottom: 2rem;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.MuiTable-root {
+  background-color: white;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  width: 100%;
+}
+
+.MuiTableHead-root {
+  background-color: #005f73;
+  color: white;
+}
+
+.MuiTableBody-root .MuiTableRow-root:hover {
+  background-color: #f1f1f1;
+}
+
+.MuiTableCell-root {
+  padding: 12px 16px;
+  text-align: left;
+  min-width: 120px;
+}
+
+button.MuiButton-outlined {
+  margin: 0 8px;
+}
+
+button.MuiButton-outlined:hover {
+  background-color: #005f73;
+  color: white;
+}
+
+.MuiPagination-root {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.MuiPaginationItem-root {
+  color: #005f73;
+  font-weight: 600;
+}
+
+.MuiPaginationItem-root:hover {
+  background-color: #005f73;
+  color: white;
+  transform: scale(1.05);
+}
+
+.MuiFormControl-root {
+  margin-top: 1rem;
+}
+
+.MuiSelect-root {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+  width: auto;
+}
+
+.MuiSelect-root:hover {
+  border-color: #005f73;
+}
+
+.MuiSelect-root.Mui-focused {
+  border-color: #005f73;
+}
+
+.MuiSelect-icon {
+  color: #005f73;
+}
+
+.MuiInputLabel-root {
+  color: #333;
+  font-weight: 600;
+}
+
+.MuiInputLabel-root.Mui-focused {
+  color: #005f73;
+}
+
+.MuiFormControl-root {
+  margin-bottom: 1rem;
+}
+
+.MuiInputBase-root {
+  margin-bottom: 1rem;
+}
