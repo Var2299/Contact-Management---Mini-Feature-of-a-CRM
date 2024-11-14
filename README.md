@@ -89,3 +89,18 @@ The backend uses **MongoDB** with a `Contact` model that consists of the followi
    - The `firstName`, `lastName`, `company`, and `jobTitle` fields are required but do not have additional specific formatting rules beyond being non-empty.
 
 This ensures that all contacts are stored with proper data formats and prevents invalid data from entering the system.
+
+## Challenges & Solutions
+
+### Challenge 1: Handling Duplicate Entries for Email and Phone
+- **Problem**: Initially, the form allowed duplicate email addresses and phone numbers, which could lead to data inconsistencies and issues when querying contacts.
+- **Solution**: I implemented server-side validation to check for duplicate entries before submitting the form. This ensures that no two contacts can have the same email or phone number, preventing data duplication and maintaining data integrity.
+
+### Challenge 2: Frontend and Backend Synchronization
+- **Problem**: Ensuring that the frontend (React) correctly reflected changes in the UI after performing CRUD operations on the backend (Express).
+- **Solution**: I used Axios to make asynchronous HTTP requests from React to the Express backend. After each operation (such as adding, updating, or deleting a contact), I updated the frontend state, ensuring that the UI reflects real-time changes without the need for manual refreshes.
+
+### Challenge 3: Pagination and Sorting
+- **Problem**: Handling large data sets caused performance issues, making the UI feel sluggish and unresponsive, especially when displaying many contacts.
+- **Solution**: I implemented pagination on the frontend using Material-UI’s Pagination component, and handled sorting on the backend via query parameters. This allows users to navigate large data sets efficiently, while the sorted and paginated data improves performance and provides a more user-friendly interface.
+
