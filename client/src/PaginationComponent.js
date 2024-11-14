@@ -1,4 +1,3 @@
-// src/components/PaginationComponent.js
 import React from 'react';
 import { Pagination } from '@mui/material';
 
