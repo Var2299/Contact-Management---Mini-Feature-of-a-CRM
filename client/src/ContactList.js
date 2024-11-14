@@ -1,4 +1,3 @@
-// src/components/ContactList.js
 import React from 'react';
 import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, TableSortLabel, Button, Paper } from '@mui/material';
 
