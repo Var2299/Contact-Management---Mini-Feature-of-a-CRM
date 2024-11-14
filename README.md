@@ -19,6 +19,9 @@ This is a **Contact Management App** that allows users to perform CRUD operation
 
 ---
 
+## Demo
+A live demo of the app is available at [this link](https://contact-management-mini-feature-of-a-crm.onrender.com/) 
+
 ## Setup Instructions
 
 ### Prerequisites
